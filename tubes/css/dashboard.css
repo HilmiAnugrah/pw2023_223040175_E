@@ -1,0 +1,32 @@
+section.dashboard-section {
+  position: relative;
+}
+section.overview-section {
+  position: relative;
+  display: none;
+}
+section.newproject {
+  position: relative;
+  display: none;
+}
+section.member-link {
+  position: relative;
+  display: none;
+}
+section.setting {
+  position: relative;
+  display: none;
+}
+.ml-300 {
+  margin-left: 300px;
+  transition: all 0.1s ease;
+}
+.mlx-300 {
+  margin-left: 300px;
+}
+.ml-100 {
+  margin-left: 100px;
+}
+.none {
+  display: none !important;
+}

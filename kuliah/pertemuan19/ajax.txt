@@ -1,0 +1,16 @@
+pertemuan 19 tentang ajax (asynchronous javascript and xml)
+
+//untuk melakukan teknik ajax ada sebuah objek di browser kita 
+1. XMLGttoRequest();
+
+
+//syarat bisa membuat ajax 
+1. harus tau minimal javascript dasar
+2. Dom
+
+
+//untuk menjalankan ajax kita butuh yang namanya triger 
+ -- triger adalah sebuah aksi yang kita lakukan untuk menjalankan ajax
+ -- misal ketika kita memencet sebuah tombol, ketika kita mengganti sebuah element ketika kita menuliskan sesuatu di input, ketika kita meload halaman itu namanya aksi/ actions 
+
+ -- nah kalo di javascript itu namanya even

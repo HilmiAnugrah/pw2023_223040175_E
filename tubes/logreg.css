@@ -1,0 +1,100 @@
+.container-page {
+  display: grid;
+  grid-template-columns: 1.5fr 2.5fr;
+  height: 100vh;
+}
+.sidebar,
+.login {
+  padding: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+a[href="index.php"] {
+  font-size: 2em;
+  font-weight: 500;
+}
+
+aside.sidebar {
+  background-color: #cde9f6;
+}
+
+section.log-reg {
+  background-color: aliceblue;
+}
+
+.halaman-log-reg a,
+span.tag {
+  color: #0d6efd;
+  text-decoration: none;
+}
+.halaman-log-reg > a {
+  font-size: 18px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.halaman-log-reg > h1 {
+  font-weight: 600;
+  color: #1e1e1e;
+}
+
+/* form log */
+
+.required::before {
+  content: "*";
+  color: red;
+  margin-right: 5px;
+}
+div.form-log-reg {
+  margin-top: 50px;
+}
+div.form-log-reg form div.username,
+.password,
+.konfirmasi-password {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  row-gap: 0.5em;
+  margin-bottom: 20px;
+}
+
+/* field from */
+div.form-log-reg label {
+  font-size: 0.9em;
+  font-weight: normal;
+}
+div.form-log-reg input {
+  border: 1px solid #aeaeae;
+  border-radius: 10px;
+  padding: 10px 15px;
+  background-color: transparent;
+  outline: #109be9;
+}
+div.form-log-reg input:focus {
+  border: 0.1em solid #109be9;
+}
+
+/* style button */
+div.button-log-reg {
+  width: 70%;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+button[name="login"],
+[name="register"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 1.5em;
+  font-weight: 500;
+  color: aliceblue;
+  background-color: #109be9;
+  border: none;
+}
+
+/*# sourceMappingURL=login.css.map */

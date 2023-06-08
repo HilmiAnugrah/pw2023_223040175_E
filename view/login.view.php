@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="logreg.css">
     <link rel="stylesheet" href="css/cssreset.css">
     <link rel="stylesheet" href="css/mybody.css">

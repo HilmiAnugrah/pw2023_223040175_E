@@ -31,6 +31,8 @@ if (isset($_POST['login'])){
     $username =$_POST['username'];
     $password = $_POST['password'];
 
+
+
     //cek apakah user meng inputkan atau tidak 
     if (empty($username || $password)){
         $require = true;
@@ -38,12 +40,18 @@ if (isset($_POST['login'])){
         $error=true;
     }
     //cek data user ada gak di data base jika ada bisa masuk jika tidak tidak masuk
-    $queryDataUser= "SELECT * FROM user WHERE username = '$username'";
-    $result= mysqli_query($conn,$queryDataUser);
+    $queryDataUser = "SELECT * FROM user WHERE 
+    username = '$username' OR
+    email = '$username'
+    ";
+    $result = mysqli_query($conn, $queryDataUser);
+
+   
     //cek username
     if(mysqli_num_rows($result)=== 1){
         //cek password
         $row = mysqli_fetch_assoc($result);
+        $sayToHello=$row['username'];
        if (password_verify($password,$row['password'])){
         //set session
         $_SESSION["login"] = true;
@@ -53,11 +61,12 @@ if (isset($_POST['login'])){
             //buat cookie 
             setcookie('id',$row['id'], time()+3600);
             setcookie('key', hash('sha256',$row['username']), time()+3600);
-        }   	
-        header("Location: dashboard.php?username=$username");
+        } 	
+        header("Location: dashboard.php?username=$sayToHello");
         exit;
        }
     }
+
     
 }
 

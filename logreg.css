@@ -5,7 +5,7 @@
 }
 .sidebar,
 .login {
-  padding: 10%;
+  padding: 0px 10%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -47,11 +47,12 @@ span.tag {
   margin-right: 5px;
 }
 div.form-log-reg {
-  margin-top: 50px;
+  margin-top: 20px;
 }
 div.form-log-reg form div.username,
 .password,
-.konfirmasi-password {
+.konfirmasi-password,
+.email {
   display: flex;
   flex-direction: column;
   width: 70%;
@@ -96,6 +97,19 @@ button[name="login"],
   background-color: #109be9;
   border: none;
 }
+
+aside.sidebar {
+  background-color: #cde9f6;
+}
+section.login {
+  background-color: aliceblue;
+}
+
+.from-log-reg .required::before {
+  content: "*";
+  color: red;
+  margin-right: 5px;
+}
 @media screen and (max-width: 768px) {
   div.from-log-reg {
     width: 100% !important;
@@ -111,24 +125,42 @@ button[name="login"],
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
-    align-items: center !important;
+    align-items: start !important;
   }
   aside.sidebar {
     display: none !important;
   }
   div.form-log-reg form div.username,
   .password,
-  .konfirmasi-password {
+  .konfirmasi-password,
+  .email {
     width: 100% !important;
   }
   div.button-log-reg {
     width: 100% !important;
+    margin-top: 20px !important;
+  }
+  div.form-log-reg label {
+    font-size: 0.7em;
+  }
+  div.form-log-reg input {
+    border-radius: 8px;
+    padding: 8px 12px;
+  }
+  button[name="login"],
+  [name="register"] {
+    padding: 8px !important;
+    border-radius: 15px !important;
+    font-size: 1.1em !important;
+    font-weight: 500;
   }
 }
 @media screen and (max-width: 1200px) {
   div.form-log-reg form div.username,
   .password,
-  .konfirmasi-password {
+  .konfirmasi-password,
+  .email,
+  div.button-log-reg {
     width: 100% !important;
   }
 }

@@ -19,11 +19,11 @@
                 <form action="" method="post">
                     <div class="username">
                         <label for="username">Username<span class="required"></span></label>
-                        <input type="text" name="username" id="username" placeholder="Email/Username" autofocus>
+                        <input type="text" name="username" id="username" placeholder="Email/Username" autofocus required>
                     </div>
                     <div class="password">
                         <label for="password">Password<span class="required"></span></label>
-                        <input type="password" name="password" id="password" placeholder="**********" >
+                        <input type="password" name="password" id="password" placeholder="**********" required>
                     </div>
                     <div class="rememberme">
                         <input type="checkbox" name="remember" id="remember" placeholder="**********">

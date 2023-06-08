@@ -12,41 +12,4 @@ section.login {
   margin-right: 5px;
 }
 
-@media screen and (max-width: 768px) {
-  div.from-log-reg {
-    width: 100% !important;
-  }
-  .container-page {
-    display: none !important;
-  }
-  section.login {
-    height: 100vh !important;
-  }
-  div.form-log-reg form {
-    width: 100% !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: center !important;
-  }
-  aside.sidebar {
-    display: none !important;
-  }
-  div.form-log-reg form div.username,
-  .password,
-  .konfirmasi-password {
-    width: 100% !important;
-  }
-  div.button-log-reg {
-    width: 100% !important;
-  }
-}
-@media screen and (max-width: 1200px) {
-  div.form-log-reg form div.username,
-  .password,
-  .konfirmasi-password {
-    width: 100% !important;
-  }
-}
-
 /*# sourceMappingURL=login.css.map */

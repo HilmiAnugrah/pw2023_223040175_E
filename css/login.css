@@ -12,6 +12,7 @@ section.login {
   margin-right: 5px;
 }
 
+<<<<<<< HEAD
 @media screen and (max-width: 768px) {
   div.from-log-reg {
     width: 100% !important;
@@ -49,4 +50,6 @@ section.login {
   }
 }
 
+=======
+>>>>>>> a46c62358430cc40438d9af859bd6d4cb9b12d90
 /*# sourceMappingURL=login.css.map */

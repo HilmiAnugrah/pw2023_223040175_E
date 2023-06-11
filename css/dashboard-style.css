@@ -12,7 +12,6 @@ li {
   padding: 0;
 }
 body {
-  min-height: 100vh;
   background: #eef5fe;
 }
 /* Pre css */
@@ -88,7 +87,7 @@ a[href="index.php"] {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 40px;
+  margin-top: 30px;
   overflow-y: auto;
   height: calc(100% - 82px);
 }
@@ -148,20 +147,47 @@ a[href="index.php"] {
   justify-content: center;
   border-radius: 4px;
 }
+/* menu items */
 
-.sidebar_profile {
+div.sidebar-profile div.data-user {
+  display: flex !important;
+  flex-direction: column;
+  overflow-x: scroll;
+}
+
+.sidebar-profile {
   padding-top: 15px;
-  margin-top: 15px;
-  gap: 15px;
   border-top: 2px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin: 0px auto;
 }
-.sidebar_profile .name {
-  font-size: 18px;
+
+div.data-user::-webkit-scrollbar {
+  margin-top: 4px;
+  width: 4px; /* Lebar scroll */
+  height: 4px; /* Tinggi scroll */
+  border-radius: 10px; /* Radius sudut scroll */
+}
+
+div.data-user::-webkit-scrollbar-track {
+  background-color: #e2efff; /* Warna latar belakang track scroll */
+  border-radius: 10px; /* Radius sudut track scroll */
+}
+
+div.data-user::-webkit-scrollbar-thumb {
+  background-color: #109be9; /* Warna thumb scroll */
+  border-radius: 10px; /* Radius sudut thumb scroll */
+}
+
+.sidebar-profile .name {
+  font-size: 16px;
   color: #333;
 }
-.sidebar_profile .email {
-  font-size: 15px;
+
+.sidebar-profile .user-email {
+  font-size: 12px;
   color: #333;
+  margin-bottom: 5px;
 }
 
 /* Navbar */
@@ -208,7 +234,7 @@ a[href="index.php"] {
     left: 65%;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
   .sidebar {
     left: 0;
     z-index: 1000;
@@ -227,6 +253,8 @@ a[href="index.php"] {
     max-width: 100%;
     transform: translateX(0%);
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
   }
   #sidebar-open {
     display: block;

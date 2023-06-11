@@ -62,7 +62,7 @@ div.form-log-reg form div.username,
 
 /* field from */
 div.form-log-reg label {
-  font-size: 0.9em;
+  font-size: 1.1em;
   font-weight: normal;
 }
 div.form-log-reg input {
@@ -141,11 +141,13 @@ section.login {
     margin-top: 20px !important;
   }
   div.form-log-reg label {
-    font-size: 0.7em;
+    font-size: 1em;
   }
-  div.form-log-reg input {
+  div.form-log-reg input,
+  input[type="checkbox"]:not {
     border-radius: 8px;
     padding: 8px 12px;
+    width: 100%;
   }
   button[name="login"],
   [name="register"] {
@@ -153,6 +155,17 @@ section.login {
     border-radius: 15px !important;
     font-size: 1.1em !important;
     font-weight: 500;
+    width: 100%;
+  }
+
+  div.rememberme {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    width: 100%;
+  }
+  div.rememberme input[type="checkbox"] {
+    width: 1.1em !important;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -162,6 +175,15 @@ section.login {
   .email,
   div.button-log-reg {
     width: 100% !important;
+  }
+  div.rememberme {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    width: 100%;
+  }
+  div.rememberme input[type="checkbox"] {
+    width: 1.2em !important;
   }
 }
 /*# sourceMappingURL=login.css.map */

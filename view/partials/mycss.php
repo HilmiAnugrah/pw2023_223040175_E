@@ -1,8 +1,4 @@
-<meta name="image" content="https://raw.githubusercontent.com/HilmiAnugrah/haydeberita/main/img/Link-sosmed.png" />
-    <meta property="og:image" content="https://raw.githubusercontent.com/HilmiAnugrah/haydeberita/main/img/Link-sosmed.png" />
-    <meta property="og:site_name" content="HaydeBerita" />
-    <meta property="og:description" content="Situs Berita Terbaru dan Terpercaya, Menyajikan Berita Terkini Dari Berbagai Sumber Berita" />
-    <meta property="og:url" content="https://hilmianugrah.github.io/haydeberita/" />
+
     <!-- Kode lainnya -->
     <!-- akhir seo -->
     <link rel="stylesheet" href="css/style.css" />

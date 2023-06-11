@@ -1,3 +1,35 @@
+<?php 
+
+// Ambil URL saat ini
+$currentURL = 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+
+// Periksa apakah URL saat ini sesuai dengan yang diharapkan
+$expectedHost = "haydeberita.my.id";
+$currentURL = rtrim($currentURL, "/");
+
+if ($currentURL == "https://" . $expectedHost . "/index.php" || $currentURL == "https://" . $expectedHost . "/") {
+  // Jika URL saat ini sesuai dengan yang diharapkan
+
+  if (!empty($_SESSION["login"])) {
+    // Jika pengguna telah berhasil login
+
+    $buttonText = "Dashboard";
+    $buttonLink = "dashboard.php?username=" . base64_encode($username) . "&email=" . base64_encode($emailUser);
+  } else {
+    // Jika pengguna belum berhasil login
+
+    $buttonText = "Masuk/Daftar";
+    $buttonLink = "login.php";
+  }
+} else {
+  // Jika URL saat ini tidak sesuai dengan yang diharapkan
+
+  $buttonText = "Masuk/Daftar";
+  $buttonLink = "login.php";
+}
+?>
+
+
 
 
 <body>
@@ -22,7 +54,7 @@
             </ul>
             <div class="button">
             <button class="signin">
-              <a href="<?= $buttonLink ?>" class="login-register"><?= $buttonText ?></a>
+                <a href="<?= $buttonLink ?>" class="login-register"><?= $buttonText ?></a>
             </button>
             </div>
             <a href="#" onclick="document.documentElement.scrollTop += 5; return false;" class="scroll">

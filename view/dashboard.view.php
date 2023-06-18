@@ -1,10 +1,3 @@
-
-<?php 
-$username = isset($_GET["username"]) ? base64_decode($_GET["username"]) : "";
-$emailUser = isset($_GET["email"]) ? base64_decode($_GET["email"]) : "";
-?>
-
-
 <!DOCTYPE html>
 <!-- Coding by CodingNepal || www.codingnepalweb.com -->
 <html lang="en">
@@ -18,8 +11,7 @@ $emailUser = isset($_GET["email"]) ? base64_decode($_GET["email"]) : "";
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="css/dashboard-style.css" />
     <link rel="stylesheet" href="css/dashboard.css">
-    <link rel="stylesheet" href="css/member.css">
-    <?php require "view/partials/meta.php"; ?>
+    
     <!-- Boxicons CSS -->
     <link flex href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <script src="js/dashboard.js" defer></script>
@@ -80,7 +72,7 @@ $emailUser = isset($_GET["email"]) ? base64_decode($_GET["email"]) : "";
             <li class="item">
               <a href="#" class="link flex" id="member-link">
                 <i class='bx bx-user-circle'></i>
-                <span>User Member</span>
+                <span>Member</span>
               </a>
             </li>
             <li class="item">
@@ -99,13 +91,13 @@ $emailUser = isset($_GET["email"]) ? base64_decode($_GET["email"]) : "";
           
 </div>
 
-        <div class="sidebar-profile flex">
+        <div class="sidebar_profile flex">
           <span class="nav_image">
-            <img src="img/user.svg" alt="logo_img" />
+            <img src="images/profile.jpg" alt="logo_img" />
           </span>
-          <div class="data-user">
-            <span class="name"><?= $username; ?></span>
-            <span class="user-email"> <?= $emailUser; ?></span>
+          <div class="data_text">
+            <span class="name">Hilmi Anugrah</span>
+            <span class="email">hilmi@gmail.com</span>
           </div>
         </div>
       </div>
@@ -119,14 +111,5 @@ $emailUser = isset($_GET["email"]) ? base64_decode($_GET["email"]) : "";
         <img src="images/profile.jpg" alt="logo_img" />
       </span>
     </nav>
-<!-- partials page -->
-<?php 
-require("view/partials/dashboard.php");
-require("view/partials/overview.php");
-require("view/partials/allproject.php");
-require("view/partials/newproject.php");
-require("view/partials/member.php");
-require("view/partials/setting.php");
-?>
   </body>
 </html>

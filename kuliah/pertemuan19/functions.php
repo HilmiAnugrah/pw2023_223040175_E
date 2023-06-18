@@ -52,7 +52,8 @@ function hapus($id)
 }
 
 // Fungsi untuk mengubah data mahasiswa
-function ubah($data){
+function ubah($data)
+{
     global $conn;
     $id = $data['id'];
     $nama = htmlspecialchars(ucwords($data['nama']));
@@ -149,12 +150,7 @@ function registrasi($data){
     $password = mysqli_real_escape_string($conn, $data['password']);
     $password2 = mysqli_real_escape_string($conn ,$data['password2']);
 
-    if (empty($username) || empty($password) || empty($password2)) {
-        echo "<script>
-        alert('username dan password tidak boleh kosong ');    
-        </script>";
-        return false;
-      }
+
 
     //cek username sudah ada atau belum
     $queryDataUser= "SELECT username FROM user WHERE username = '$username'";
@@ -170,7 +166,7 @@ function registrasi($data){
     if($password !== $password2){
         echo "<script>
                 alert('Password dan Konfirmasi Password tidak sesuai!!');
-            </script>";
+            </>";
             return false;
     }
     //enkripsi password 

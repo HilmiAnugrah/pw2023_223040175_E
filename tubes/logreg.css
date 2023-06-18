@@ -5,7 +5,7 @@
 }
 .sidebar,
 .login {
-  padding: 0px 10%;
+  padding: 10%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -47,12 +47,11 @@ span.tag {
   margin-right: 5px;
 }
 div.form-log-reg {
-  margin-top: 20px;
+  margin-top: 50px;
 }
 div.form-log-reg form div.username,
 .password,
-.konfirmasi-password,
-.email {
+.konfirmasi-password {
   display: flex;
   flex-direction: column;
   width: 70%;
@@ -62,7 +61,7 @@ div.form-log-reg form div.username,
 
 /* field from */
 div.form-log-reg label {
-  font-size: 1.1em;
+  font-size: 0.9em;
   font-weight: normal;
 }
 div.form-log-reg input {
@@ -98,92 +97,4 @@ button[name="login"],
   border: none;
 }
 
-aside.sidebar {
-  background-color: #cde9f6;
-}
-section.login {
-  background-color: aliceblue;
-}
-
-.from-log-reg .required::before {
-  content: "*";
-  color: red;
-  margin-right: 5px;
-}
-@media screen and (max-width: 768px) {
-  div.from-log-reg {
-    width: 100% !important;
-  }
-  div.container-page {
-    display: block !important;
-  }
-  section.login {
-    height: 100vh !important;
-  }
-  div.form-log-reg form {
-    width: 100% !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: start !important;
-  }
-  aside.sidebar {
-    display: none !important;
-  }
-  div.form-log-reg form div.username,
-  .password,
-  .konfirmasi-password,
-  .email {
-    width: 100% !important;
-  }
-  div.button-log-reg {
-    width: 100% !important;
-    margin-top: 20px !important;
-  }
-  div.form-log-reg label {
-    font-size: 1em;
-  }
-  div.form-log-reg input,
-  input[type="checkbox"]:not {
-    border-radius: 8px;
-    padding: 8px 12px;
-    width: 100%;
-  }
-  button[name="login"],
-  [name="register"] {
-    padding: 8px !important;
-    border-radius: 15px !important;
-    font-size: 1.1em !important;
-    font-weight: 500;
-    width: 100%;
-  }
-
-  div.rememberme {
-    display: flex;
-    flex-direction: row;
-    gap: 5px;
-    width: 100%;
-  }
-  div.rememberme input[type="checkbox"] {
-    width: 1.1em !important;
-  }
-}
-@media screen and (max-width: 1200px) {
-  div.form-log-reg form div.username,
-  .password,
-  .konfirmasi-password,
-  .email,
-  div.button-log-reg {
-    width: 100% !important;
-  }
-  div.rememberme {
-    display: flex;
-    flex-direction: row;
-    gap: 5px;
-    width: 100%;
-  }
-  div.rememberme input[type="checkbox"] {
-    width: 1.2em !important;
-  }
-}
 /*# sourceMappingURL=login.css.map */

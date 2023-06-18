@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost"; // Ganti dengan nama server Anda
-$username = "u1531698_hayde"; // Ganti dengan username database Anda
-$password = "haydebismillah"; // Ganti dengan password database Anda
-$dbname = "u1531698_haydeberita"; // Ganti dengan nama database Anda
+$username = "root"; // Ganti dengan username database Anda
+$password = "hayde"; // Ganti dengan password database Anda
+$dbname = "phpdasar"; // Ganti dengan nama database Anda
 // Koneksi ke database
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
@@ -74,102 +74,9 @@ function registrasi($data){
     $password = password_hash($password, PASSWORD_DEFAULT);
   
     // Tambahkan user baru ke database
-    $query = "INSERT INTO user VALUES(null,'$username','$email','$password','')";
+    $query = "INSERT INTO user VALUES(null,'$username','$email','$password')";
     mysqli_query($conn, $query);
     return mysqli_affected_rows($conn);
 }
 
 
-// hapus data
-function hapus($id){
-    global $conn;
-    mysqli_query($conn, "DELETE FROM user WHERE id = $id");
-    return mysqli_affected_rows($conn);
-}
-
-
-function ubah($data){
-    global $conn;
-    $id = $data['id'];
-    $nama = htmlspecialchars(strtolower($data['username']));
-    $email = htmlspecialchars($data['email']);
-    $password = $data['password']; // Password baru
-    $gambarLama = htmlspecialchars($data['gambarLama']);
-    // Periksa apakah password baru diisi atau tidak
-    $encodeUser= base64_encode($nama);
-    $encodeEmail=base64_encode($email);
-      // Upload Gambar
-      $gambar = upload();
-      if (!$gambar) {
-          return false;
-      }
-  
-    
-    if (!empty($password)) {
-        // Hash password baru jika ada
-        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-        $query = "UPDATE user SET 
-                    username = '$nama',
-                    email = '$email',
-                    password = '$hashedPassword',
-                    image ='$gambar'
-
-                  WHERE id = $id";
-    } else {
-        $query = "UPDATE user SET 
-                    username = '$nama',
-                    email = '$email',
-                    image ='$gambarLama'
-                  WHERE id = $id";
-    }
-  
-    $result = mysqli_query($conn, $query);
-    if ($result) {
-        echo "<script>
-                alert('Data berhasil diubah');
-                window.location.href = 'dashboard.php?username=" . $encodeUser . "&email=" . $encodeEmail . "';
-              </script>";
-    } else {
-        echo "<script>
-                alert('Data gagal diubah');
-                window.location.href = 'dashboard.php?username=" . $encodeUser . "&email=" . $encodeEmail . "';
-              </script>";
-    }
-    return mysqli_affected_rows($conn);
-}
-function upload()
-{
-    $namaFiles = $_FILES['image']['name'];
-    $ukuranFiles = $_FILES['image']['size'];
-    $error = $_FILES['image']['error'];
-    $tmpName = $_FILES['image']['tmp_name'];
-
-    // Cek apakah tidak ada gambar yang diupload
-    if ($error === 4) {
-        echo "<div>Pilih gambar terlebih dahulu</div>";
-        return false;
-    }
-
-    // Cek apakah yang diupload adalah gambar
-    $ekstensiGambarValid = ['jpg', 'jpeg', 'png'];
-    $ekstensiGambar = explode('.', $namaFiles);
-    $ekstensiGambar = strtolower(end($ekstensiGambar));
-    if (!in_array($ekstensiGambar, $ekstensiGambarValid)) {
-        echo "<div>Type gambar harus jpg, jpeg, atau png</div>";
-        return false;
-    }
-
-    // Cek jika ukurannya terlalu besar
-    if ($ukuranFiles > 1000000) {
-        echo "<div>Ukuran gambar harus kurang dari 1MB</div>";
-        return false;
-    }
-    
-    // Lolos pengecekan gambar, siap diupload
-    //generate nama baru 
-    $namaFilesBaru = uniqid();
-    $namaFilesBaru .= '.';
-    $namaFilesBaru .=$ekstensiGambar;
-    move_uploaded_file($tmpName, "image/" . $namaFilesBaru);
-    return $namaFilesBaru;
-}

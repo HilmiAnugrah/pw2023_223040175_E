@@ -15,6 +15,7 @@ if (isset($_POST['submit'])){
 // cek apakah data berhasil di tambahkan atau tidak?
   ubah($_POST);
 }
+
 ?>
 
 

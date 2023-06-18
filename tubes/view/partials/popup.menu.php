@@ -8,7 +8,7 @@
           </div>
           <!-- user login -->
           <div class="user-login">
-            <a href="login.php"><img src="img/user.svg" alt="User" />Masuk/Daftar</a>
+          <a href="<?= $buttonLink ?>"><img src="img/user.svg" alt="User" /><?= $buttonText ?></a>
           </div>
           <!-- search pencarian -->
           <section class="popup-pencarian">

@@ -16,10 +16,14 @@
                     <?php if(isset($require)): ?>
                     <p style="color:red; font-style:italic;">Kamu Belum Login!!</p>
                     <?php endif; ?>
+                    <?php if(isset($invalid)): ?>
+                    <p style="color:red; font-style:italic;">Username/Email tidak terdaftar!! silahkan daftar <a href="register.php">disini</a></p>
+
+                    <?php endif; ?>
                 <form action="" method="post">
                     <div class="username">
                         <label for="username">Username<span class="required"></span></label>
-                        <input type="text" name="username" id="username" placeholder="Email/Username" autofocus>
+                        <input type="text" name="username" id="username" placeholder="Email/Username" autofocus >
                     </div>
                     <div class="password">
                         <label for="password">Password<span class="required"></span></label>

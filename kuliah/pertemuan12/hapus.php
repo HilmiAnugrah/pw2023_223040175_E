@@ -1,6 +1,4 @@
 <?php 
-
-
 $id = $_GET['id'];
 require('functions.php');
 if (hapus($id) > 0){

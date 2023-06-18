@@ -5,6 +5,10 @@ section.overview-section {
   position: relative;
   display: none;
 }
+section.allprojectsection {
+  position: relative;
+  display: none;
+}
 section.newproject {
   position: relative;
   display: none;
